@@ -11,24 +11,22 @@ package unidemo;
  */
 public class Lecturer extends UniPeople implements ITeach 
 {
-    public Lecturer() 
+    public Lecturer(String name, Integer id) 
     {
-        
+        this.name = name;
+        this.id = id;
     }
-    
+ 
     @Override
-    public void teach(){
-        
+    public void setCoursework(String coursework)
+    {
+     coursework = "assignment";
     }
-    
-//@Override
-    //public void setCoursework(Course course){
-
     @Override
-    public void setCourse(Course course) {
-        super.setCourse(course); //To change body of generated methods, choose Tools | Templates.
+    public void teach()
+    {
+        System.out.println(name + " is teaching " + course + " in room " + room);
     }
-        
 }
             
     
